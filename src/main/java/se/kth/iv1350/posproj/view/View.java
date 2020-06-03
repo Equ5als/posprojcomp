@@ -81,12 +81,12 @@ public class View {
             System.out.println("Product: " + product.getItemDescription() + ", Cost: " + product.getItemPrice() +
                     " kr, Total Price: " + controller.getTotalPriceWithVat() + " kr.");
         } catch (ActionFailedException exception){
-            String message = "\nNotice! The product was not found, \nplease check if you entered a correct identifier " +
-                    "and try again.\n";
+            String message = "\nNotice! a failure in performing the action, " +
+                    "\nplease try again and check if you entered the correct type of input.\n";
             System.out.println(message);
         } catch (SystemFailureException exception) {
-            String message = "\nNotice! Connection error which made it not possible to get information,\nplease try again or " +
-                    "try restarting the program.\n";
+            String message = "\nNotice! System error which made it not possible to run the program properly," +
+                    "\ntry restarting the program.\n";
             System.out.println(message);
         }
     }
